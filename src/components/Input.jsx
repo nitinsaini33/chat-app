@@ -1,7 +1,7 @@
 import React from 'react'
-import './components.css'
+import './common.css'
 import {IoMdAttach} from 'react-icons/io'
-import {GrGallery} from 'react-icons/gr'
+import {FcGallery} from 'react-icons/fc'
 import { ChatContext } from '../context/ChatContext'
 import { AuthContext } from '../context/AuthContext'
 import { useContext } from 'react'
@@ -76,7 +76,7 @@ setImg(null)
        <div className='icon-img'><IoMdAttach/></div> 
         <input type="file" style={{display:"none"}} id="file" onChange={e=>setImg(e.target.files[0])}/>
         <label htmlFor="file">
-         <div className='icon-img'> <GrGallery/></div>
+         <div className='icon-img'> <FcGallery/></div>
         </label>
         <button onClick={handleSand}>Send</button>
         </div>

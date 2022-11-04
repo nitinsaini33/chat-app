@@ -1,0 +1,118 @@
+.formContainer{
+    background-color: rgba(0, 0, 0, 0.079);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 0px 10px rgba(42, 40, 40, 0.553);
+    justify-content: center;
+}
+
+.formWrapper form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    
+}
+.logo-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}
+.title{
+    color: rgba(0, 128, 0, 0.905);
+    font-size: 15px;
+    
+}
+.formWrapper{
+    backdrop-filter: blur(30px);
+  background-color:rgba(255,255,255,0.2);
+    padding: 20px 60px;
+    border-radius: 10px;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    box-shadow:  0 0 12px rgba(0, 0, 0, 0.2);
+    border-bottom: 5px solid orange;
+}
+.register-main{
+    color: #5d5b8d;
+    font-weight: bold;
+    font-size: 25px;
+}
+.input-fill{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+}
+ .input-fill input{
+    border: none;
+    margin: 5px 20px;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 8px;
+    outline: none;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+   
+}
+input::placeholder{
+    color: #817b7b;
+    font-weight: bold;
+    letter-spacing: 1px;
+    
+}
+.input-fill button{
+    width: 120px;
+    cursor: pointer;
+    margin: 10px auto;
+    background:linear-gradient(to left ,blue,red) ;
+    color: #fff;
+    padding: 12px  20px;
+    border: none;
+    outline: none;
+    border-radius: 20px 100px;
+    transition: 0.2s;
+}
+.input-fill button:active{
+    transform: scale(0.9);
+    background:linear-gradient(to left,blue,red);
+}
+p{
+    color: #5d5b8d;
+    font-size: 13px;
+    margin-top: 10px;
+    text-align: center;
+}
+label{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #8da4f1;
+    font-size: 12px;
+    cursor: pointer;
+}
+.icon{
+   
+    font-size: 23px;
+}
+.home{
+    background-color: #a7bcffe1;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    border: 1px solid #fff;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    width: 65%;
+    height: 80%;
+    display: flex;
+    overflow: hidden;
+    
+}

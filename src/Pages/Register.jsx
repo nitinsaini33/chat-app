@@ -4,7 +4,7 @@ import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { auth } from "../firbase";
 import { storage } from "../firbase";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
-import "./Pages.css";
+import "./HomeCommon.css";
 import { useState } from "react";
 import { doc, setDoc } from "firebase/firestore";
 import { db } from "../firbase";
@@ -14,7 +14,7 @@ const Register = () => {
   const navigate = useNavigate();
   const handelSubmit = async (e) => {
     e.preventDefault();
-    alert("click");
+    
     // console.log(e.target[0].value)
     const displayName = e.target[0].value;
     const email = e.target[1].value;
@@ -61,21 +61,24 @@ const Register = () => {
     <div className="formContainer">
       <div className="formWrapper">
         <div className="logo-title">
-          <span className="logo">Real Chat</span>
+          <span className="register-main">Real Chat</span>
           <span className="title">Register</span>
         </div>
         <form onSubmit={handelSubmit}>
+          <div className="input-fill">
+
           <input type="text" placeholder="display name" />
           <input type="email" placeholder="email" />
           <input type="password" placeholder="password" />
           <input style={{ display: "none" }} type="file" id="file" />
           <label htmlFor="file">
             <FcGallery className="icon" />
-            <span>Add an avatar</span>
+            <span>Add a Img</span>
           </label>
 
           <button>Sign up</button>
           {err && <span>Something went wrong</span>}
+          </div>
         </form>
         <p>
           you do have an account?<Link to="/login">Login</Link>{" "}

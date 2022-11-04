@@ -1,6 +1,6 @@
 import React from 'react'
 import Message from './Message'
-import './components.css'
+import './common.css'
 import { useState } from 'react'
 import { useContext } from 'react'
 import { useEffect } from 'react'
@@ -24,6 +24,7 @@ const Messages = () => {
   console.log("mess",messages)
   return (
     <div className='messages'>
+      
         {
           messages?.map(m=>(
             <Message messages={m} key={m.id}/>

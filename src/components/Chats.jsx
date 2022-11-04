@@ -1,5 +1,5 @@
 import React from "react";
-import "./components.css";
+import "./common.css";
 import { useState } from "react";
 import { useEffect } from "react";
 import { doc, onSnapshot } from "firebase/firestore";
@@ -13,9 +13,9 @@ const Chats = () => {
   const { dispatch } = useContext(ChatContext);
   useEffect(() => {
     const getChats = () => {
-      
+
       const unsub = onSnapshot(doc(db, "userChats", currentUser?.uid), (doc) => {
-        
+
         setChats(doc.data());
         console.log("data", doc.data());
       });
@@ -35,15 +35,13 @@ const Chats = () => {
       {Object?.entries(chats)
         ?.sort((a, b) => b[1].date - a[1].date)
         .map((chat) => (
-          <div
-            className="uesrChat"
+          <div className="uesrChat"
             key={chat[0]}
-            onClick={() => handleSelect(chat[1].userInfo)}
-          >
+            onClick={() => handleSelect(chat[1].userInfo)}>
             <img src={chat[1]?.userInfo?.photoURL} alt="" />
             <div className="userChatInfo">
               <div className="chats-data">
-                
+
                 <span>{chat[1].userInfo?.displayName}</span>
                 <p>{chat[1].lastMessage?.text}</p>
               </div>
@@ -51,7 +49,7 @@ const Chats = () => {
           </div>
         ))}
 
-    
+
     </div>
   );
 };

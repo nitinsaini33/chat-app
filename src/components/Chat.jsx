@@ -1,5 +1,5 @@
-import React from 'react'
-import './components.css'
+import React, { useState } from 'react'
+import './common.css'
 import {HiOutlineVideoCamera} from 'react-icons/hi'
 import {AiOutlineUserAdd} from 'react-icons/ai'
 import {FiMoreHorizontal} from 'react-icons/fi'
@@ -9,6 +9,10 @@ import { useContext } from 'react'
 import { ChatContext } from '../context/ChatContext'
 const Chat = () => {
   const {data}=useContext(ChatContext)
+  const [show,setShow]= React.useState(false);
+  const handleShow=()=>{
+    setShow(!show);
+  }
   return (
     <div className='chat'>
       <div className="chatInfo">
@@ -20,7 +24,11 @@ const Chat = () => {
         <div className="chatIcons">
           <HiOutlineVideoCamera/>
           <AiOutlineUserAdd/>
-          <FiMoreHorizontal/>
+          <div className="export-chat-main">
+            
+          <FiMoreHorizontal  onClick={handleShow}/>
+         {show ?  <div className="export-chat"><button>Transper</button></div>:<h1></h1>}
+</div>
         </div>
         
       </div>

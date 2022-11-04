@@ -1,5 +1,5 @@
 import React from 'react'
-import './components.css'
+import './common.css'
 // import images1 from  '../image/images1.jpg'
 import { signOut } from 'firebase/auth'
 import { auth } from '../firbase'
@@ -9,12 +9,23 @@ const Navbar = () => {
   const {currentUser}=useContext(AuthContext)
   return (
     <div className='navbar'>
-      <span className='navbar-logo'>Real Chat</span>
+      <ul className='navbar-logo'>
+       <li>R</li>
+       <li>e</li>
+       <li>a</li>
+       <li>l</li>
+       <br/> 
+       <li></li>
+       <li>C</li>
+       <li>h</li>
+       <li>a</li>
+       <li>t</li>
+      </ul>
       
       <div className='user'>
         <img src={currentUser.photoURL} alt=""/>
         <span>{currentUser.displayName}</span>
-        <button onClick={()=>signOut(auth)}>Log-Out</button>
+        <button onClick={()=>signOut(auth)}>LogOut</button>
       </div>
     </div>
   )

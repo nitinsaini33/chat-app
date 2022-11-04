@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
-import './components.css'
+import './common.css'
 import { collection, query, where,getDocs, setDoc, updateDoc, serverTimestamp, getDoc } from "firebase/firestore";
 import { db } from '../firbase';
 import { AuthContext } from '../context/AuthContext';

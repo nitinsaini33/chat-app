@@ -1,5 +1,5 @@
 import React from 'react'
-import './Pages.css'
+import './HomeCommon.css'
 import {  signInWithEmailAndPassword } from "firebase/auth";
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
@@ -10,7 +10,7 @@ const Login = () => {
   const navigate=useNavigate()
   const handelSubmit =async(e)=>{
     e.preventDefault()
-    alert("click")
+    
     // console.log(e.target[0].value)
     
     const email=e.target[0].value;
@@ -39,12 +39,12 @@ setErr(true);
             <span className='title'>Login</span></div>
             <form onSubmit={handelSubmit}>
                 
+                <div className="input-fill">
 
                 <input type="email" placeholder="email"/>
                 <input type="password" placeholder="password"/>
-                
-               
                 <button>Login</button>
+                </div>
                 {err && <span>Something went wrong</span>}
             </form>
             <p>you do have an account?<Link to="/register" >Register</Link> </p>
