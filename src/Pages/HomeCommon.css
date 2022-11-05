@@ -3,77 +3,83 @@
     height: 100vh;
     display: flex;
     align-items: center;
-    box-shadow: 0px 0px 10px rgba(42, 40, 40, 0.553);
+    box-shadow: 0rem 0rem .1rem rgba(42, 40, 40, 0.553);
     justify-content: center;
 }
 
 .formWrapper form{
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 1.5rem;
     
 }
 .logo-title{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
-    padding: 10px;
+    gap: .1rem;
+    padding: .1rem;
+}
+.logo{
+    color: #5d5b8d;
+    font-weight: bold;
+    font-size: 2.5rem;
 }
 .title{
     color: rgba(0, 128, 0, 0.905);
-    font-size: 15px;
+    font-size: 1.5rem;
     
 }
 .formWrapper{
-    backdrop-filter: blur(30px);
+    backdrop-filter: blur(3.0rem);
   background-color:rgba(255,255,255,0.2);
-    padding: 20px 60px;
-    border-radius: 10px;
+    padding: 2.0rem 6.0rem;
+    border-radius: .1rem;
     flex-direction: column;
-    gap: 10px;
+    gap: .1rem;
     align-items: center;
-    box-shadow:  0 0 12px rgba(0, 0, 0, 0.2);
-    border-bottom: 5px solid orange;
+    border-radius: 10px;
+    box-shadow:  0 0 1.2rem rgba(0, 0, 0, 0.2);
+    border-bottom: .5rem solid orange;
 }
 .register-main{
     color: #5d5b8d;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 2.5rem;
 }
 .input-fill{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 15px;
+    gap: 1.5rem;
 }
  .input-fill input{
     border: none;
-    margin: 5px 20px;
-    padding: 10px 20px;
+    margin: .5rem 2.0rem;
+    padding: 1.0rem 2.0rem;
     font-weight: bold;
-    border-radius: 8px;
+    border-radius: .8rem;
     outline: none;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    box-shadow: 0 0 1.0rem rgba(0,0,0,0.2);
    
 }
 input::placeholder{
     color: #817b7b;
     font-weight: bold;
-    letter-spacing: 1px;
+    letter-spacing: .1rem;
     
 }
 .input-fill button{
-    width: 120px;
+    width: 12.0rem;
     cursor: pointer;
-    margin: 10px auto;
+    margin: 1.0rem auto;
     background:linear-gradient(to left ,blue,red) ;
     color: #fff;
-    padding: 12px  20px;
+    padding: 1.2rem  2.0rem;
     border: none;
     outline: none;
-    border-radius: 20px 100px;
+    border-radius: 2.0rem 10rem;
     transition: 0.2s;
 }
 .input-fill button:active{
@@ -82,8 +88,8 @@ input::placeholder{
 }
 p{
     color: #5d5b8d;
-    font-size: 13px;
-    margin-top: 10px;
+    font-size: 1.3rem;
+    margin-top: 1rem;
     text-align: center;
 }
 label{
@@ -91,12 +97,12 @@ label{
     align-items: center;
     gap: 10px;
     color: #8da4f1;
-    font-size: 12px;
+    font-size: 1.2rem;
     cursor: pointer;
 }
 .icon{
    
-    font-size: 23px;
+    font-size: 2.3rem;
 }
 .home{
     background-color: #a7bcffe1;
@@ -108,11 +114,12 @@ label{
 }
 .container{
     border: 1px solid #fff;
-    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
+    box-shadow: 0 0 1.2rem rgba(0, 0, 0, 0.2);
+    border-radius: 1rem;
     width: 65%;
     height: 80%;
     display: flex;
     overflow: hidden;
+    border-bottom: .4rem solid green;
     
 }

@@ -12,62 +12,65 @@ background-color: rgba(17, 17, 17, 0.797);
     display: flex;
     align-items: center;
     background-color: #2f2d52;
-    height: 50px;
-    padding-left: 10px;
-    padding-right: 10px;
+    height: 6rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     justify-content: space-between;
     color: #ddddf7;
 }
 .navbar-logo{
-    margin: 5px;
+
     font-weight: bold;
-    font-size:20px;
-    letter-spacing: 1px;
-    color: rgba(172, 255, 47, 0.606);
+    font-size:1.7rem;
+    letter-spacing: .1rem;
+    color: red;
+    text-shadow: 6px 6px 6px black;
 }
 
 .user{
     display: flex;
     gap: 5px;
     align-items: center;
+    
+   
 }
 .user span{
-    font-size: 12px;
+    font-size: 1.2rem;
 }
  img{
     background-color: #ddddf7;
-    height: 24px;
-    width: 24px;
+    height: 2.4rem;
+    width: 2.4rem;
     border-radius: 50%;
     object-fit: cover;
 }
 .user button{
-    background:linear-gradient(to left ,blue,red) ;
-    color: #ddddf7;
-    font-size: 10px;
     border: none;
-    padding: 7px;
-    width: 8vh;
-    border-radius: 20px;
+    padding: 1.6rem .6rem;
+    font-size: 1rem;
     cursor: pointer;
-    transition:0.2s;
+    color: #fff;
+    background:linear-gradient(to left ,blue,red) ;
+    border-radius: 50%;
+    
 }
 .user button:active{
     transform: scale(0.9);
     background:linear-gradient(to left,blue,red);
 }
+
 .Search{
-    border-bottom:1px solid gray;
+    border-bottom:.1rem solid gray;
 }
 .uesrChat img{
-    width: 40px;
-    height: 40px;
+    width: 4rem;
+    height: 4rem;
     border-radius: 50%;
     object-fit: cover;
 }
 .Searchform input{
     background-color: transparent;
-    margin: 5px;
+    margin: .5rem;
     border: none;
     outline: none;
     color: #fff;
@@ -80,58 +83,71 @@ background-color: rgba(17, 17, 17, 0.797);
     z-index: 9999;
 }
 .uesrChat{
-    padding: 10px;
-    margin-top: 10px;
+    padding: 1rem;
+    margin-top: 1rem;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 1rem;
     color: #fff;
     cursor: pointer;
-    height: 45px;
+    height: 4.5rem;
     z-index:999;
 }
 .uesrChat:hover{
     background-color: #16126a6d;
 }
 .chats-data span{
-    font-size: 18px;
+    font-size: 1.8rem;
     font-weight: 500;
 }
 .chats-data p{
-    font-size: 14px;
+    font-size: 1.4rem;
     color: lightgray;
 }
 .chatInfo{
-    height: 50px;
+    height: 5rem;
     background-color: #5d5b8d;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px;
+    padding: 1rem;
     color: lightgray;
 
 }
 .export-chat-main{
-    margin-top: 30px;
+    margin-top: 3rem;
     position: relative;
 }
 .user-Info{
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: .8rem;
 }
 .chatIcons{
     display: flex;
     align-items: center;
-    gap: 15px;
-    font-size: 22px;
+    gap: 1.5rem;
+    font-size: 2.2rem;
     cursor: pointer;
+}
+.user-Info span{
+    font-size: 20px;
+    color: #000;
+    text-shadow: 1px 1px 1px #eee;
+    letter-spacing: 1px;
+}
+.user-Info img{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 1px solid #eee;
+    box-shadow: 0 0 1.2rem rgba(0, 0, 0, 0.2);
 }
 
 .messages{
    
-    /* padding: 5px; */
-    height: calc(100%  - 145px);
+    /* padding: 5rem; */
+    height: calc(100%  - 14.5rem);
     overflow-y: scroll;
     /* background:url(..//image/bgimg.jpg) no-repeat; */
     position: relative;
@@ -144,13 +160,13 @@ background-color: rgba(17, 17, 17, 0.797);
     width: 100%;
     height: 100%;
     background-color:rgba(255,255,255,0.1);
-    backdrop-filter: blur(30px);
+    backdrop-filter: blur(30rem);
     z-index: 1;
 } */
 .input{
-    height: 50px;
+    height: 5rem;
     background-color: rgba(0, 0, 0, 0.644);
-    padding: 14px;
+    padding: 1.4rem;
     display: flex;
     align-items: center;
     
@@ -161,7 +177,7 @@ background-color: rgba(17, 17, 17, 0.797);
     border: none;
     outline: none;
     color: #fff;
-    font-size: 18px;
+    font-size: 1.8rem;
     background-color: transparent;
 }
 .input input::placeholder{
@@ -171,12 +187,12 @@ background-color: rgba(17, 17, 17, 0.797);
 .send{
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 1rem;
     cursor: pointer;
     
 }
 .icon-img{
-    font-size: 30px;
+    font-size: 3rem;
     color: green;
     display: flex;
     align-items: center;
@@ -184,14 +200,15 @@ background-color: rgba(17, 17, 17, 0.797);
 }
 .send button{
     border: none;
-    padding: 8px 13px;
+    padding: .8rem 1.3rem;
+    cursor: pointer;
     color: #fff;
     background:linear-gradient(to left ,blue,red) ;
-    border-radius: 5px;
+    border-radius: .5rem;
 }
 .message{
     display: flex;
-    gap: 20px;
+    gap: 2rem;
 }
 .messageInfo{
     display: flex;
@@ -200,22 +217,22 @@ background-color: rgba(17, 17, 17, 0.797);
     font-weight: 300;
 }
 .messageInfo img{
-    width: 40px;
-    height: 40px;
+    width: 4rem;
+    height: 4rem;
     border-radius: 50%;
     object-fit: cover;
     
 }
 .messageContent img{
-    width: 150px;
-    border-radius: 0px;
-    height: 200px;
+    width: 15rem;
+    border-radius: 0rem;
+    height: 20rem;
 }
 .messageContent p{
     color: #fff;
     background:linear-gradient(to left ,#0bb1b1,#20ec05d3) ;
-    padding: 10px 20px;
-    border-radius: 10px 0px 10px 10px;
+    padding: 1rem 2rem;
+    border-radius: 1rem 0rem 1rem 1rem;
     max-width: max-content;
    
 }
@@ -223,22 +240,9 @@ background-color: rgba(17, 17, 17, 0.797);
     max-width: 80%;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 1rem;
     align-items: flex-end;
 }
 .message.owner{
     flex-direction: row-reverse;
-}
-.export-chat{
-    position: absolute;
-    margin-right: 0;
-
-}
-.export-chat button{
-    padding: 12px;
-    width: 70px;
-    background:linear-gradient(to left ,blue,red) ;
-    
-    border-radius: 10px;
-    color: #fff;
 }

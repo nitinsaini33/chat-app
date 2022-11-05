@@ -3,7 +3,7 @@ import { AuthContext } from '../context/AuthContext'
 import { ChatContext } from '../context/ChatContext'
 import { useRef } from 'react'
 import { useContext ,useEffect} from 'react'
-import bgimg from '../image/bgimg.jpg'
+
 const Message = ({messages}) => {
   console.log("me",messages.senderId)
   const {currentUser}=useContext(AuthContext)

@@ -25,7 +25,7 @@ const Register = () => {
       const res = await createUserWithEmailAndPassword(auth, email, password);
       console.log("res", res);
 
-      // const storage = getStorage();
+      
       const storageRef = ref(storage, displayName);
 
       const uploadTask = uploadBytesResumable(storageRef, file);
