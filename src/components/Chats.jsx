@@ -7,6 +7,7 @@ import { db } from "../firbase";
 import { useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
 import { ChatContext } from "../context/ChatContext";
+
 const Chats = () => {
   const [chats, setChats] = useState([]);
   const { currentUser } = useContext(AuthContext);
@@ -17,7 +18,7 @@ const Chats = () => {
       const unsub = onSnapshot(doc(db, "userChats", currentUser?.uid), (doc) => {
 
         setChats(doc.data());
-        console.log("data", doc.data());
+        
       });
 
       return () => {
@@ -30,13 +31,14 @@ const Chats = () => {
   const handleSelect = (u) => {
     dispatch({ type: "CHANGE_USER", payload: u });
   };
+  
   return (
     <div className="chats">
       {Object?.entries(chats)
         ?.sort((a, b) => b[1].date - a[1].date)
-        .map((chat) => (
+        .map((chat,i) => (
           <div className="uesrChat"
-            key={chat[0]}
+            key={i}
             onClick={() => handleSelect(chat[1].userInfo)}>
             <img src={chat[1]?.userInfo?.photoURL} alt="" />
             <div className="userChatInfo">

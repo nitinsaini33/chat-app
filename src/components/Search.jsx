@@ -6,13 +6,13 @@ import { db } from '../firbase';
 import { AuthContext } from '../context/AuthContext';
 import { useContext } from 'react';
 import { doc } from 'firebase/firestore';
-const Search = () => {
+const Search = () => { 
   const [username,setUsername]=useState("")
   const [user,setUser]=useState(null)
   const [err,setErr]=useState(false)
   const {currentUser}=useContext(AuthContext)
   const handelSearch= async()=>{
-const q=query( 
+  const q=query( 
   collection(db,"users"),
 where("displayName","==",username )
 );
@@ -35,7 +35,7 @@ querySnapshot.forEach((doc) => {
     currentUser.uid > user.uid
     ?currentUser.uid+ user.uid
     :user.uid +currentUser.uid;
-    console.log("com",combinedId)
+    console.log("combinedid",combinedId)
     try{
       const res=await getDoc (doc(db,"Chats",combinedId))
       console.log("yes",res)

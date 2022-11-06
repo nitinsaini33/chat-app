@@ -1,10 +1,11 @@
 .sidebar{
     width: 40%;
 background-color: rgba(17, 17, 17, 0.797);
+border-bottom: 10px solid  rgba(17, 17, 17, 0.436);
 }
 .chat{
     width: 60%;
-    /* background:url('../image/bgimg1.jpg'); */
+   
     
 
 }
@@ -38,7 +39,8 @@ background-color: rgba(17, 17, 17, 0.797);
     font-size: 1.5rem;
 }
  .user img{
-    background-color: #ddddf7;
+    border: none;
+    outline: none;
     height: 4rem;
     width: 4rem;
     border-radius: 50%;
@@ -132,9 +134,10 @@ background-color: rgba(17, 17, 17, 0.797);
 }
 .user-Info span{
     font-size: 20px;
-    color: #000;
-    text-shadow: 1px 1px 1px #eee;
-    letter-spacing: 1px;
+    color: #fff;
+    text-shadow: 3px 3px 3px #000;
+
+    letter-spacing: .06rem;
 }
 .user-Info img{
     height: 40px;
@@ -201,7 +204,7 @@ background-color: rgba(17, 17, 17, 0.797);
     justify-content: center;
 }
 .send button{
-    border: none;
+   border: none;
     padding: .8rem 1.3rem;
     cursor: pointer;
     color: #fff;
@@ -226,9 +229,11 @@ background-color: rgba(17, 17, 17, 0.797);
     
 }
 .messageContent img{
-    width: 15rem;
-    border-radius: 0rem;
-    height: 20rem;
+    width: 4rem;
+    border-radius: 50%;
+    height: 4rem;
+    margin-left: .5rem;
+    
 }
 .messageContent p{
     color: #fff;
@@ -243,9 +248,24 @@ background-color: rgba(17, 17, 17, 0.797);
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    
     align-items: flex-end;
+    
+    
 }
 .message.owner{
     flex-direction: row-reverse;
+}
+
+.export-data   button{
+    background:linear-gradient(to left ,#0bb1b1,#20ec05d3);
+    padding: .8rem 1.3rem;
+    cursor: pointer;
+    color: #fff;
+    border-radius: .5rem;
+    border: none;
+
+}
+.export-data button:active{
+    transform: scale(0.9);
+    background:linear-gradient(to left,blue,red);
 }

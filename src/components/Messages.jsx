@@ -1,6 +1,6 @@
 import React from 'react'
-import Message from './Message'
 import './common.css'
+import Message from './Message'
 import { useState } from 'react'
 import { useContext } from 'react'
 import { useEffect } from 'react'
@@ -21,7 +21,7 @@ const Messages = () => {
     
   }, [data.chatId])
   
-  console.log("mess",messages)
+  console.log("messages",messages)
   return (
     <div className='messages'>
       

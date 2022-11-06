@@ -1,10 +1,10 @@
 import React from 'react'
 import './common.css'
-
 import { signOut } from 'firebase/auth'
 import { auth } from '../firbase'
 import { AuthContext } from '../context/AuthContext'
 import { useContext } from 'react'
+
 const Navbar = () => {
   const {currentUser}=useContext(AuthContext)
   return (
@@ -13,11 +13,15 @@ const Navbar = () => {
       
       <div className='user'>
      
-        <img src={currentUser.photoURL} alt=""/>
-        <span>{currentUser.displayName}</span>
-        
+      <img src={currentUser.photoURL} alt=""/>
+      <span>{currentUser.displayName}</span>
+       
         <button onClick={()=>signOut(auth)}>LogOut</button>
+        
       </div>
+
+      
+      
     </div>
   )
 }

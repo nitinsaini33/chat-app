@@ -1,12 +1,11 @@
 import React from "react";
 import './common.css'
-import {HiOutlineVideoCamera} from 'react-icons/hi'
-import {AiOutlineUserAdd} from 'react-icons/ai'
-import {FiMoreHorizontal} from 'react-icons/fi'
 import Messages from './Messages'
 import Input from './Input'
 import { useContext } from 'react'
 import { ChatContext } from '../context/ChatContext'
+import ExportData from "./ExportFile/ExportData";
+
 const Chat = () => {
   const {data}=useContext(ChatContext)
  
@@ -18,19 +17,14 @@ const Chat = () => {
         <img src={data.user.photoURL} alt="" />
         <span>{data.user?.displayName}</span>
         </div>
-        <div className="chatIcons">
-          <HiOutlineVideoCamera/>
-          <AiOutlineUserAdd/>
-          <FiMoreHorizontal  />
-          
-            
-        
-
-        </div>
+       
+        <ExportData/>
         
       </div>
       <Messages/>
       <Input/>
+     
+       
     </div>
   )
 }
