@@ -29,16 +29,14 @@ querySnapshot.forEach((doc) => {
     e.code==="Enter" && handelSearch();
   }
   const handleSelect= async()=>{
-    alert("click yes")
+    
     //check whether the group (chats in firestore) exists,if not create
-    const combinedId=
-    currentUser.uid > user.uid
-    ?currentUser.uid+ user.uid
-    :user.uid +currentUser.uid;
-    console.log("combinedid",combinedId)
+    const combinedId=currentUser.uid > user.uid
+    ?currentUser.uid+ user.uid:user.uid +currentUser.uid;
+   
     try{
       const res=await getDoc (doc(db,"Chats",combinedId))
-      console.log("yes",res)
+      
       if(!res.exists()){
         //create a chat in chats collection
         await setDoc(doc (db,"chats",combinedId),{messages:[]})

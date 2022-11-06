@@ -11,12 +11,12 @@ const Exportdata = () => {
   const { data } = useContext(ChatContext);
   const { currentUser } = useContext(AuthContext);
   const{combineId}=data;
-  console.log("my id",combineId);
+ 
 
 
   const processData=[]
     const getChats = () => {
-      alert("run");
+      
       const unsub = onSnapshot(
         doc(db, "userChats",currentUser.uid ),
         (doc) => {
@@ -55,7 +55,7 @@ setMessages(processData);
     });
     const blob = new Blob([file], { type: "text/plain" });
     const url = URL.createObjectURL(blob);
-    console.log("blob",url)
+    ole.log("blob",url)
     const link = document.createElement("a");
     link.download = "user-info.txt";
     link.href = url;
