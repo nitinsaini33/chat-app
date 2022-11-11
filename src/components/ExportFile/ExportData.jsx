@@ -1,5 +1,4 @@
 import React, { useContext,  useState } from "react";
-
 import { doc,onSnapshot } from "firebase/firestore";
 import { AuthContext } from "../../context/AuthContext";
 import { ChatContext } from "../../context/ChatContext";
@@ -49,13 +48,13 @@ setMessages(processData);
     messages.length>0&& messages?.forEach((item) => {
       const time = new Date(item?.date * 1000).toLocaleTimeString();
       const date = new Date(item?.date* 1000).toLocaleDateString();
-      console.log("time", time);
+   
 
       file += `${date} ${time} ${item?.displayName} ${item?.messages} \n`;
     });
     const blob = new Blob([file], { type: "text/plain" });
     const url = URL.createObjectURL(blob);
-    ole.log("blob",url)
+    
     const link = document.createElement("a");
     link.download = "user-info.txt";
     link.href = url;

@@ -1,11 +1,11 @@
 .sidebar{
     width: 40%;
 background-color: rgba(17, 17, 17, 0.797);
-border-bottom: 10px solid  rgba(17, 17, 17, 0.436);
+height: 80.5vh;
 }
 .chat{
     width: 60%;
-   
+  
     
 
 }

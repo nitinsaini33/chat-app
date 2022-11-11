@@ -8,7 +8,7 @@ import {useContext} from 'react';
 import { AuthContext } from "./context/AuthContext";
 function App() {
   const {currentUser}=useContext(AuthContext)
-  console.log('user',currentUser)
+  
   const ProtectedRoute=({children})=>{
     if(!currentUser){
       return  <Navigate to="/register" />
@@ -24,8 +24,8 @@ function App() {
         <Route path="/" element={<ProtectedRoute/>}>
           <Route path="/" element={<Home />} />
         </Route>
-<Route path="login" element={<Login/>}/>
-<Route path="register" element={<Register/>}/>
+        <Route path="login" element={<Login/>}/>
+        <Route path="register" element={<Register/>}/>
      
     </Routes>
     </BrowserRouter>

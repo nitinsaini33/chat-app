@@ -9,13 +9,17 @@ import { useState } from "react";
 import { doc, setDoc } from "firebase/firestore";
 import { db } from "../firbase";
 import { useNavigate, Link } from "react-router-dom";
+
+
+
+
 const Register = () => {
   const [err, setErr] = useState(false);
   const navigate = useNavigate();
   const handelSubmit = async (e) => {
     e.preventDefault();
+
     
-    // console.log(e.target[0].value)
     const displayName = e.target[0].value;
     const email = e.target[1].value;
     const password = e.target[2].value;
@@ -23,9 +27,9 @@ const Register = () => {
 
     try {
       const res = await createUserWithEmailAndPassword(auth, email, password);
-      console.log("res", res);
 
-      
+
+
       const storageRef = ref(storage, displayName);
 
       const uploadTask = uploadBytesResumable(storageRef, file);
@@ -47,9 +51,9 @@ const Register = () => {
               email,
               photoURL: downloadURL,
             });
-            
+
             navigate("/");
-           
+
           });
         }
       );
@@ -67,17 +71,17 @@ const Register = () => {
         <form onSubmit={handelSubmit}>
           <div className="input-fill">
 
-          <input type="text" placeholder="display name" />
-          <input type="email" placeholder="email" />
-          <input type="password" placeholder="password" />
-          <input style={{ display: "none" }} type="file" id="file" />
-          <label htmlFor="file">
-            <FcGallery className="icon" />
-            <span>Add a Img</span>
-          </label>
+            <input type="text" placeholder="display name" />
+            <input type="email" placeholder="email" />
+            <input type="password" placeholder="password" />
+            <input style={{ display: "none" }} type="file" id="file" />
+            <label htmlFor="file">
+              <FcGallery className="icon" />
+              <span>Add a Img</span>
+            </label>
 
-          <button>Sign up</button>
-          {err && <span>Something went wrong</span>}
+            <button>Sign up</button>
+            {err && <span>Something went wrong</span>}
           </div>
         </form>
         <p>
